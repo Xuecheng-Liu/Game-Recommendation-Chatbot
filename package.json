@@ -1,0 +1,39 @@
+{
+  "name": "gamebot",
+  "version": "1.0.0",
+  "description": "Node web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSN06S/GameBot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSN06S/GameBot/issues"
+  },
+  "homepage": "https://github.com/MSN06S/GameBot#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@google-cloud/translate": "^5.2.0",
+    "babel": "^6.23.0",
+    "babelify": "^10.0.0",
+    "fs": "0.0.1-security",
+    "giantbomb": "^2.0.2",
+    "google-translate": "^3.0.0",
+    "ibm-watson": "^5.3.1",
+    "igdb-api-node": "^4.0.3",
+    "readline": "^1.3.0",
+    "request": "^2.88.2",
+    "uniqid": "^5.2.0",
+    "yandex-translate": "^2.1.3"
+  }
+}

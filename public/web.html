@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<!--Retrived from:https://www.w3schools.com/howto/howto_css_split_screen.asp -->
+<html>
+   <head>
+      <link rel="stylesheet" type="text/css" href="theme.css">
+   </head>
+   <body>
+      <script src="bundle.js"></script>
+      <script>
+         (async () => { await myBundle.startSession(); })();
+      </script>
+      <!--left for chat box -->
+      <div class = "split left">
+         <h2>CHAT</h2>
+         <!-- upper half for chat history -->
+         <div class="chat-scroll" id="autoScroll">
+            <div class="container">
+               <img src="robot.png" alt="Avatar">
+               <p>Hello. This is GameBot.
+                  Let's explore some Games!
+                  Which platform do you prefer to play on?</p>
+               <p>(If you want to make conversation with different language, use "Set Language" button)</p>
+            </div>
+         </div>
+         <!-- lower half for chat input box -->
+         <div class="chat-box">
+            <div class="container chat">
+               <form>
+                  <input id="input-box" type="text" name="chat">
+                  <input type="button" onclick="(async () => { await myBundle.addChat(); })();" value="Enter"/>
+                  <input type="button" onclick="(async () => { await myBundle.endSession(); })();" value="Restart"/>
+                  <input type="button" onclick="(async () => { await myBundle.setLanguage(); })();" value="Set Language"/>
+               </form>
+	            <!--<button class="btn"><img src="mic.png" alt="Avatar" align="center"></button>-->
+            </div>
+         </div>
+      </div>
+      <!-- javaScript to auto scroll to bottom -->
+      <script>
+         var objDiv = document.getElementById("autoScroll");
+         objDiv.scrollTop = objDiv.scrollHeight;
+      </script>
+      <!--right for game page -->
+      <div class="split right">
+         <h3 style="color:black">List of Recommendation:</h3>
+         <div id="recommendList">
+         </div>
+      </div>
+   </body>
+</html>
+
+
